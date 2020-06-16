@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLTintuc">
+  <DataContextMoniker Name="/QLTintucDataContext" />
+  <nestedChildShapes>
+    <classShape Id="01415f89-0e86-452c-a5ff-9f04d603e45b" absoluteBounds="6.75, 0.75, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/QLTintucDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1042045c-ce09-4318-acd6-a5335f110d3a" absoluteBounds="6.765, 1.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc6ff12b-0b0e-4561-b833-958126df6351" absoluteBounds="3.5, 4.875, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/QLTintucDataContext/TINTUC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3909ec28-7621-4ca8-850c-22a34d95ae9f" absoluteBounds="3.515, 5.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="252ee0e7-4b7c-40e9-8a76-76f10b3a9f7d" absoluteBounds="6.75, 3.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/QLTintucDataContext/CHITIETDONTHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f2ffc03-bebf-4556-9413-26ca2caed13f" absoluteBounds="6.765, 4.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e608b40f-ab8c-4cc1-80c4-ff36496b4553" absoluteBounds="0.75, 5.25, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/QLTintucDataContext/CHUDETINTUC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5cc9e549-1fa1-4143-8c28-316e2006fbd6" absoluteBounds="0.765, 5.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3e666154-df47-4665-9e3a-456eab1dae37" absoluteBounds="3.5, 1.125, 2, 1.9631982421875003">
+      <DataClassMoniker Name="/QLTintucDataContext/DONDATHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c4210e6-d997-4add-b9ab-73b3bd380d80" absoluteBounds="3.515, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4a6062be-654b-4323-97e2-2ed998c4996c" absoluteBounds="0.75, 1, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/QLTintucDataContext/KHACHHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50807ead-ac61-4b3e-b9b1-12d41ead8c23" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 5.84699625651042); (3.5 : 5.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLTintucDataContext/CHUDETINTUC/CHUDETINTUC_TINTUC" />
+      <nodes>
+        <classShapeMoniker Id="e608b40f-ab8c-4cc1-80c4-ff36496b4553" />
+        <classShapeMoniker Id="cc6ff12b-0b0e-4561-b833-958126df6351" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.10659912109375); (3.5 : 2.10659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/QLTintucDataContext/KHACHHANG/KHACHHANG_DONDATHANG" />
+      <nodes>
+        <classShapeMoniker Id="4a6062be-654b-4323-97e2-2ed998c4996c" />
+        <classShapeMoniker Id="3e666154-df47-4665-9e3a-456eab1dae37" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
