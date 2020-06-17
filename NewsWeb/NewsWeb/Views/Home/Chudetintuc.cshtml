@@ -1,0 +1,10 @@
+﻿@model IEnumerable<NewsWeb.Models.CHUDETINTUC>
+<p class="lead">CHỦ ĐỀ TIN TỨC</p>
+<div class="list-group">
+    @foreach (var item in Model)
+    {
+        <a href="@Url.Action("TinTheochude", "Home", new { id = item.MaCD})" class="list-group-item">
+            @item.TenChuDe
+        </a>
+    }
+</div>

@@ -1,0 +1,37 @@
+﻿@using NewsWeb.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<TINTUC>
+@{
+    ViewBag.Title = "TinTheochude";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 style="text-align:center; color:red">TIN TỨC THEO CHỦ ĐỀ</h3>
+<div class="row">
+    @foreach (var tintuc in Model)
+    {
+        <div class="col-sm-4 col-lg-4 col-md-4">
+            <div class="thumbnail">
+                <a href="@Url.Action("Details", "Home", new { id = tintuc.Matintuc})">
+                    <img alt="@tintuc.Tentintuc" src="~/Content/book_images/@tintuc.    " width="150" />
+                </a>
+                <div>
+                    <br />
+                    <h4 style="text-align:center">@tintuc.Tentintuc</h4>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+@*Tạo liên kết các trang*@
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+<div class="MenuPage">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>
+<style>
+    .MenuPage li {
+        display: inline;
+    }
+</style>
+

@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbotron">
+    <div>
+        <div style="width:40%; float:left; border-left: dotted 1px; border-color:azure">
+            <img src="~/Content/News_images/" width="100%" />
+        </div>
+        <div style="width:60%; float:left; padding:10px">
+            <h4 style="font-weight:bold; color:red">@Model.Tentintuc</h4>
+            <p style="text-align:justify">
+                @Model.Mota
+            </p>
+        </div>
+    </div>
+</div>
