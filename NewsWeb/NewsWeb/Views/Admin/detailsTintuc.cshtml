@@ -1,0 +1,59 @@
+﻿@model NewsWeb.Models.TINTUC
+
+@{
+    ViewBag.Title = "detailsTintuc";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>THÔNG TIN CHI TIẾT SÁCH</h2>
+
+<div>
+    <h4>TINTUC</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên tin tức:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tentintuc)
+        </dd>
+
+        <dt>
+            Mô tả:
+        </dt>
+
+        <dd style="width: 600px; text-align: justify;">
+            @Html.DisplayFor(model => model.Mota)
+        </dd>
+
+        <dt>
+            Ảnh bìa:
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/Content/News_images/" + Model.Anhbia)" width="120px"/>
+        </dd>
+
+        <dt>
+            Ngày cập nhật:
+        </dt>
+
+        <dd>
+            @String.Format("{0:dd/MM/yyyy}", Model.Ngaycapnhat)
+        </dd>
+
+        <dt>
+            Chủ đề:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CHUDETINTUC.TenChuDe)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Matintuc }) |
+    @Html.ActionLink("Back to List", "Tintuc")
+</p>

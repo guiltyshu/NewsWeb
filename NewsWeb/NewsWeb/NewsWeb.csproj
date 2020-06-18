@@ -177,11 +177,13 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -197,6 +199,32 @@
     <Content Include="Content\Banner_images\Marketplace-Lending-News.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\News_images\130499.jpg" />
+    <Content Include="Content\News_images\TH002.jpg" />
+    <Content Include="Content\News_images\TH003.jpg" />
+    <Content Include="Content\Banner_images\Capture11.jpg" />
+    <Content Include="Content\Banner_images\Capture12.jpg" />
+    <Content Include="Content\News_images\Capture13.PNG" />
+    <Content Include="Content\News_images\Capture2.PNG" />
+    <Content Include="Content\News_images\Capture3.PNG" />
+    <Content Include="Content\News_images\Capture4.PNG" />
+    <Content Include="Content\News_images\Capture5.PNG" />
+    <Content Include="Content\News_images\Capture6.PNG" />
+    <Content Include="Content\News_images\Capture7.PNG" />
+    <Content Include="Content\News_images\Capture8.PNG" />
+    <Content Include="Content\News_images\Capture9.PNG" />
+    <Content Include="Content\News_images\Gt_Thcb.jpg" />
+    <Content Include="Content\News_images\Gt.jpg" />
+    <Content Include="Content\News_images\KT0001.jpg" />
+    <Content Include="Content\News_images\KT0002.jpg" />
+    <Content Include="Content\News_images\KT0003.jpg" />
+    <Content Include="Content\News_images\KT0004.jpg" />
+    <Content Include="Content\News_images\KT0005.jpg" />
+    <Content Include="Content\News_images\LTWeb2005.jpg" />
+    <Content Include="Content\News_images\TH001.jpg" />
+    <Content Include="Content\News_images\TH004.jpg" />
+    <Content Include="Content\News_images\THCB.jpg" />
+    <Content Include="Content\News_images\TiengAnh01.jpg" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -258,10 +286,17 @@
     <Content Include="Views\Home\Chudetintuc.cshtml" />
     <Content Include="Views\Home\TinTheochude.cshtml" />
     <Content Include="Views\Home\Details.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Admin\Tintuc.cshtml" />
+    <Content Include="Views\Admin\Create.cshtml" />
+    <Content Include="Views\Admin\detailsTintuc.cshtml" />
+    <Content Include="Views\Admin\deleteTintuc.cshtml" />
+    <Content Include="Views\Admin\editTintuc.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\News_images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

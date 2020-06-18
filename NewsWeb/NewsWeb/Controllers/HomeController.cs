@@ -19,7 +19,7 @@ namespace NewsWeb.Controllers
         
         public ActionResult Index(int ? page)
         {
-            int pageSizes = 5;
+            int pageSizes = 6;
             int pageNum = (page ?? 1);
 
             var news = getNews(6);
@@ -34,7 +34,7 @@ namespace NewsWeb.Controllers
 
         public ActionResult TinTheochude(int id, int? page)
         {
-            int pageSizes = 5;
+            int pageSizes = 6;
             int pageNum = (page ?? 1);
 
             var news = from n in data.TINTUCs where n.MaCD == id select n;

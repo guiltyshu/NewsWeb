@@ -1,0 +1,87 @@
+﻿@using NewsWeb.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<NewsWeb.Models.TINTUC>
+
+@helper Truncate(string input, int length)
+{
+    if (input.Length < length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length)<text>...</text>
+    }
+}
+
+@{
+    ViewBag.Title = "Tintuc";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>QUẢN LÝ THÔNG TIN TIN TỨC</h2>
+
+<a href="@Url.Action("Create", "Admin")" class="btn btn-block btn-primary">Create new</a>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Matintuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Tentintuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Mota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Anhbia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Ngaycapnhat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().MaCD)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Matintuc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tentintuc)
+            </td>
+            <td>
+                @Truncate(item.Mota, 100)
+            </td>
+            <td>
+                <img src="~/Content/News_images/@item.Anhbia)" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ngaycapnhat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CHUDETINTUC.TenChuDe)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Matintuc }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Matintuc }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Matintuc })
+            </td>
+        </tr>
+    }
+
+</table>
+Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)/@Model.PageCount
+<div class="PageMenu">
+    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+</div>
+<style>
+    .PageMenu li {
+        display: inline;
+    }
+</style>
